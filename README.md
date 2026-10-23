@@ -6,6 +6,10 @@ A relational database project for a vehicle-rental service, built for the Univer
 
 [Technical brief report](docs/portfolio-report.pdf) · [Original course report (Greek)](docs/report.pdf) · [Setup and implementation notes](docs/SETUP.md)
 
+![Admin view in phpMyAdmin showing the vehicle inventory query and results](docs/assets/admin-view.webp)
+
+*Admin view: vehicle inventory and category results in phpMyAdmin.*
+
 ![Database model](docs/assets/database-model.svg)
 
 ## What the project covers
