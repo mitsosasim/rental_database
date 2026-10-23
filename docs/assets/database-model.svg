@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="490" viewBox="0 0 1100 490" role="img" aria-labelledby="title desc">
+<title id="title">Vehicle rental database relationships</title><desc id="desc">Registration is referenced by Customer. Rental and Report reference Customer and Vehicle. Four category tables reference Vehicle.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#64748b" stroke-width="1.3"/></marker></defs>
+<rect width="1100" height="490" rx="16" fill="#f5f7fb"/>
+<g font-family="DejaVu Sans,Arial,sans-serif"><text x="32" y="38" font-size="23" font-weight="bold" fill="#123349">Vehicle rental · relational model</text>
+<text x="32" y="66" font-size="14" fill="#526476">Arrows follow foreign keys from referenced table to child table.</text>
+<g fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)">
+<path d="M300 147H385"/><path d="M515 205V248H180V287"/>
+<path d="M515 205V287"/><path d="M835 205V232H660V270H300V287"/>
+<path d="M835 205V260H620V287"/><path d="M900 205V287"/>
+</g>
+<rect x="40" y="105" width="260" height="100" rx="10" fill="white" stroke="#ccd6e0"/><rect x="40" y="105" width="260" height="7" rx="3" fill="#137b8b"/><text x="58" y="139" font-size="19" font-weight="bold" fill="#123349">Registration</text>
+<text x="58" y="166" font-size="14" fill="#42566a">PK registration_id</text>
+<text x="58" y="189" font-size="14" fill="#42566a">Unique username</text>
+<rect x="385" y="105" width="260" height="100" rx="10" fill="white" stroke="#ccd6e0"/><rect x="385" y="105" width="260" height="7" rx="3" fill="#137b8b"/><text x="403" y="139" font-size="19" font-weight="bold" fill="#123349">Customer</text>
+<text x="403" y="166" font-size="14" fill="#42566a">PK customer_id</text>
+<text x="403" y="189" font-size="14" fill="#42566a">FK registration_id</text>
+<rect x="730" y="105" width="330" height="100" rx="10" fill="white" stroke="#ccd6e0"/><rect x="730" y="105" width="330" height="7" rx="3" fill="#137b8b"/><text x="748" y="139" font-size="19" font-weight="bold" fill="#123349">Vehicle</text>
+<text x="748" y="166" font-size="14" fill="#42566a">PK vehicle_id</text>
+<text x="748" y="189" font-size="14" fill="#42566a">Availability, rates, shared attributes</text>
+<rect x="40" y="287" width="310" height="135" rx="10" fill="white" stroke="#ccd6e0"/><rect x="40" y="287" width="310" height="7" rx="3" fill="#137b8b"/><text x="58" y="321" font-size="19" font-weight="bold" fill="#123349">Rental</text>
+<text x="58" y="348" font-size="14" fill="#42566a">PK rental_id</text>
+<text x="58" y="371" font-size="14" fill="#42566a">FK customer_id, vehicle_id</text>
+<text x="58" y="394" font-size="14" fill="#42566a">Date, duration in days, cost</text>
+<rect x="390" y="287" width="310" height="135" rx="10" fill="white" stroke="#ccd6e0"/><rect x="390" y="287" width="310" height="7" rx="3" fill="#137b8b"/><text x="408" y="321" font-size="19" font-weight="bold" fill="#123349">Report</text>
+<text x="408" y="348" font-size="14" fill="#42566a">PK report_id</text>
+<text x="408" y="371" font-size="14" fill="#42566a">FK customer_id, vehicle_id</text>
+<text x="408" y="394" font-size="14" fill="#42566a">Repair details, date, repair cost</text>
+<rect x="740" y="287" width="320" height="135" rx="10" fill="white" stroke="#ccd6e0"/><rect x="740" y="287" width="320" height="7" rx="3" fill="#a57520"/><text x="758" y="321" font-size="19" font-weight="bold" fill="#123349">Vehicle categories</text>
+<text x="758" y="348" font-size="14" fill="#42566a">Car · Motorcycle</text>
+<text x="758" y="371" font-size="14" fill="#42566a">Bicycle · Electric_Scooter</text>
+<text x="758" y="394" font-size="14" fill="#42566a">Each has FK vehicle_id</text>
+<text x="40" y="461" font-size="13" fill="#526476">Nine tables · category exclusivity and the registration-to-customer back reference are not enforced.</text></g></svg>
